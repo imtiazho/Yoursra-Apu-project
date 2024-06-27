@@ -20,6 +20,7 @@ const NavBar = () => {
     for(const item of cart){
         quantity = item.quantity + quantity;
     }
+
     const handleSignOut = () => {
         toast.success('Signout Successfully!')
         signOut(auth)
@@ -40,11 +41,6 @@ const NavBar = () => {
                         :
                         <Link className='login' to='/login'>Login</Link>
                     }
-
-
-                    {/* <div className="profile-dropdown">
-                        <h1>Profile</h1>
-                    </div> */}
                 </div>
 
                 {settingOpen &&

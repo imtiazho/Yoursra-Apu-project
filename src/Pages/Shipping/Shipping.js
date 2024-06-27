@@ -1,12 +1,16 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Shipping.css'
+import toast from 'react-hot-toast';
 
 const Shipping = () => {
     const navigate = useNavigate()
     const handleForm = (e) => {
         e.preventDefault();
+        navigate('/confirmOrder')
+        toast.success('Order has beed placed!');
     }
+
     return (
         <div className='shipping'>
             <div className="form-container">
@@ -37,7 +41,7 @@ const Shipping = () => {
                     </div>
 
                     <div className="input-field">
-                        <input onClick={()=>navigate('/confirmOrder')} type="submit" value="Save & Continue" />
+                        <input type="submit" value="Save & Continue" />
                     </div>
                 </form>
             </div>
