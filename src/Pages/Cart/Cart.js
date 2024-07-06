@@ -9,7 +9,7 @@ import './Cart.css'
 const Cart = () => {
     const [cart, setCart] = useContext(CartContext);
 
-    const { data } = useFood('https://mocki.io/v1/3a3cebdb-09ae-47ee-961c-6981aa3a5dc3');
+    const { data } = useFood('https://mocki.io/v1/57ecd28c-eaa6-4bc0-bc8d-de9d733d386c');
 
     
     // Get cart from local storeage

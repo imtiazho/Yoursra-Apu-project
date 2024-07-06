@@ -11,7 +11,7 @@ import TopBaner from '../TopBaner/TopBaner';
 const Home = () => {
     const [cart, setCart] = useContext(CartContext);
 
-    const { data } = useFood('https://mocki.io/v1/2d7938c9-278a-48ad-bbbb-9fc172e5a2e0');
+    const { data } = useFood('https://mocki.io/v1/57ecd28c-eaa6-4bc0-bc8d-de9d733d386c');
 
     // Get cart from local storeage
     useEffect(() => {
