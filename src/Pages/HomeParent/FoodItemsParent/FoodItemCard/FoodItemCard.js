@@ -23,7 +23,7 @@ const FoodItemCard = ({ food }) => {
             <div className="food-info">
                 <h4>{name}</h4>
                 <p><small>{shortDesc}</small></p>
-                <h3>$ {price}</h3>
+                <h3>BTD {price}</h3>
             </div>
         </Link>
     );

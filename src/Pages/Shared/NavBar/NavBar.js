@@ -30,9 +30,12 @@ const NavBar = () => {
     return (
         <div className='nav-container'>
             <nav>
-                <img src={logo} alt="Logo" />
+                <Link to='/'>
+                    <img src={logo} alt="Logo" />
+                </Link>
 
                 <div className='nav-links'>
+                    <Link className='menu-button' to='/menu-item'>Menu</Link>
                     <Link className='cart-icon' to='/cart'><BsCart3 /> <span>{quantity}</span></Link>
                     {user ?
                         <div onClick={() => setSettingOpen(!settingOpen)} className="user-profile">

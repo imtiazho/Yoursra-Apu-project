@@ -20,17 +20,17 @@ const CartCalculation = ({ cart }) => {
             <div className="calculate-item">
                 <div className="each-info">
                     <p>Sub-total:</p> 
-                    <p>$ {subTotal}</p>
+                    <p>BDT {subTotal}</p>
                 </div>
 
                 <div className="each-info">
                     <p>Tax: </p>
-                    <p>$ {tax}</p>
+                    <p>BDT {tax}</p>
                 </div>
 
                 <div className="each-info">
                     <h4>Total:</h4> 
-                    <h4>$ {total.toFixed(2)}</h4>
+                    <h4>BDT {total.toFixed(2)}</h4>
                 </div>
             </div>
 

@@ -14,6 +14,7 @@ import { createContext, useState } from 'react';
 import Shipping from './Pages/Shipping/Shipping';
 import ConfirmOrder from './Pages/ConfirmOrder/ConfirmOrder';
 import RequirAuth from './RequirAuth/RequirAuth';
+import MenuItem from './Pages/menuItem/menuItem';
 
 export const CartContext = createContext()
 
@@ -31,6 +32,7 @@ function App() {
           <Route path='dinner' element={<Dinner />} />
         </Route>
         <Route path='/home' element={<Home />}></Route>
+        <Route path='/menu-item' element={<MenuItem />}></Route>
         <Route path='/cart' element={<Cart />}></Route>
         <Route path='/shipping' element={
           <RequirAuth>

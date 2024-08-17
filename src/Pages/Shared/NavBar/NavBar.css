@@ -48,6 +48,10 @@ a.cart-icon {
     align-items: center;
 }
 
+a.menu-button{
+    font-size: 17px;
+}
+
 .login {
     background: #F91944;
     padding: 5px 15px;

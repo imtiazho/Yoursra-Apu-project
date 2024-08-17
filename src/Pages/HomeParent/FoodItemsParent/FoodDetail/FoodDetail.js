@@ -50,7 +50,7 @@ const FoodDetail = () => {
         ]
     }
  
-    const { data } = useFood('https://mocki.io/v1/57ecd28c-eaa6-4bc0-bc8d-de9d733d386c');
+    const { data } = useFood('https://mocki.io/v1/25137a33-f21b-4a9c-bd9f-61233879a1be');
 
     const selectedFood = data.find(food => food.id === foodId);
 
