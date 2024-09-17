@@ -1,101 +1,101 @@
 .nav-container {
-    width: 100%;
+  width: 100%;
 }
 
 nav {
-    width: 90%;
-    margin: 0 auto;
-    height: 80px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
+  width: 90%;
+  margin: 0 auto;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
 }
 
 nav img {
-    width: 130px;
+  width: 80px;
 }
 
 .nav-links {
-    display: flex;
-    align-items: center;
-    gap: 5rem;
+  display: flex;
+  align-items: center;
+  gap: 5rem;
 }
 
 .nav-links a {
-    color: black;
-    font-size: 15px;
-    cursor: pointer;
+  color: black;
+  font-size: 15px;
+  cursor: pointer;
 }
 
 a.cart-icon {
-    font-size: 23px;
-    position: relative;
+  font-size: 23px;
+  position: relative;
 }
 
-.cart-icon span{
-    position: absolute;
-    top: -7px;
-    right: -11px;
-    font-size: 11px;
-    color: #fff;
-    background-color: #F91944;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.cart-icon span {
+  position: absolute;
+  top: -7px;
+  right: -11px;
+  font-size: 11px;
+  color: #fff;
+  background-color: #f91944;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-a.menu-button{
-    font-size: 17px;
+a.menu-button {
+  font-size: 17px;
 }
 
 .login {
-    background: #F91944;
-    padding: 5px 15px;
-    border-radius: 25px;
+  background: #f91944;
+  padding: 5px 15px;
+  border-radius: 25px;
 }
 
-.nav-links a.login{
-    color: #fff;
+.nav-links a.login {
+  color: #fff;
 }
 
-.user-profile{
-    width: 40px;
-    height: 40px;
-    border: 1px solid #ddd;
-    border-radius: 50%;
-    overflow: hidden;
-    object-fit: cover;
-    cursor: pointer;
+.user-profile {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  overflow: hidden;
+  object-fit: cover;
+  cursor: pointer;
 }
 
 .settings-menu {
-    position: absolute;
-    right: 0;
-    bottom: -166%;
-    width: 200px;
-    background: #fff;
-    border-radius: 5px;
-    padding: 12px 18px;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    align-items: center;
+  position: absolute;
+  right: 0;
+  bottom: -166%;
+  width: 200px;
+  background: #fff;
+  border-radius: 5px;
+  padding: 12px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
 }
-.settings-menu p{
-    background-color: #ddd;
-    width: 100%;
-    padding: 10px 20px;
-    border-radius: 5px;
+.settings-menu p {
+  background-color: #ddd;
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 5px;
 }
-.settings-menu button{
-    width: 100%;
-    padding: 10px 20px;
-    border-radius: 5px;
-    background-color: #F91944;
-    color: #fff;
-    cursor: pointer;
+.settings-menu button {
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #f91944;
+  color: #fff;
+  cursor: pointer;
 }

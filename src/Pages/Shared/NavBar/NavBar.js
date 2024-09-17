@@ -1,60 +1,68 @@
-import React, { useContext, useState } from 'react';
-import './NavBar.css'
-import { Link } from 'react-router-dom';
-import logo from '../../../images/logo2.png'
-import { BsCart3 } from 'react-icons/bs';
-import userIcon from '../../../images/icons/user-icon.png'
-import { useAuthState } from 'react-firebase-hooks/auth';
-import auth from '../../../Firebase/Firebase';
-import { signOut } from 'firebase/auth';
-import { CartContext } from '../../../App';
-import toast from 'react-hot-toast';
-
+import React, { useContext, useState } from "react";
+import "./NavBar.css";
+import { Link } from "react-router-dom";
+import logo from "../../../images/logso2.png";
+import { BsCart3 } from "react-icons/bs";
+import userIcon from "../../../images/icons/user-icon.png";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../../../Firebase/Firebase";
+import { signOut } from "firebase/auth";
+import { CartContext } from "../../../App";
+import toast from "react-hot-toast";
 
 const NavBar = () => {
-    const [settingOpen, setSettingOpen] = useState(false);
-    const [user, loading, error] = useAuthState(auth);
-    const [cart, setCart] = useContext(CartContext)
-    
-    let quantity = 0;
-    for(const item of cart){
-        quantity = item.quantity + quantity;
-    }
+  const [settingOpen, setSettingOpen] = useState(false);
+  const [user, loading, error] = useAuthState(auth);
+  const [cart, setCart] = useContext(CartContext);
 
-    const handleSignOut = () => {
-        toast.success('Signout Successfully!')
-        signOut(auth)
-        setSettingOpen(false)
-    }
+  let quantity = 0;
+  for (const item of cart) {
+    quantity = item.quantity + quantity;
+  }
 
-    return (
-        <div className='nav-container'>
-            <nav>
-                <Link to='/'>
-                    <img src={logo} alt="Logo" />
-                </Link>
+  const handleSignOut = () => {
+    toast.success("Signout Successfully!");
+    signOut(auth);
+    setSettingOpen(false);
+  };
 
-                <div className='nav-links'>
-                    <Link className='menu-button' to='/menu-item'>Menu</Link>
-                    <Link className='cart-icon' to='/cart'><BsCart3 /> <span>{quantity}</span></Link>
-                    {user ?
-                        <div onClick={() => setSettingOpen(!settingOpen)} className="user-profile">
-                            <img src={userIcon} alt="" />
-                        </div>
-                        :
-                        <Link className='login' to='/login'>Login</Link>
-                    }
-                </div>
+  return (
+    <div className="nav-container">
+      <nav>
+        <Link className="logos" to="/">
+          <img src={logo} alt="Logo" />
+        </Link>
 
-                {settingOpen &&
-                    <div className="settings-menu">
-                        <p>{user?.email}</p>
-                        <button onClick={handleSignOut}>Logout</button>
-                    </div>
-                }
-            </nav>
+        <div className="nav-links">
+          <Link className="menu-button" to="/menu-item">
+            Menu
+          </Link>
+          <Link className="cart-icon" to="/cart">
+            <BsCart3 /> <span>{quantity}</span>
+          </Link>
+          {user ? (
+            <div
+              onClick={() => setSettingOpen(!settingOpen)}
+              className="user-profile"
+            >
+              <img src={userIcon} alt="" />
+            </div>
+          ) : (
+            <Link className="login" to="/login">
+              Login
+            </Link>
+          )}
         </div>
-    );
+
+        {settingOpen && (
+          <div className="settings-menu">
+            <p>{user?.email}</p>
+            <button onClick={handleSignOut}>Logout</button>
+          </div>
+        )}
+      </nav>
+    </div>
+  );
 };
 
 export default NavBar;
